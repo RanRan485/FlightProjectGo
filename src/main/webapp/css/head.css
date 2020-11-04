@@ -1,0 +1,565 @@
+.header{
+    width: 100%;
+    height: 55px;
+    background: #ffe300;
+    position: relative;
+}
+.header a{
+    display: inline-block;
+    margin-right: -5px;
+    text-decoration: none;
+    height: 56px;
+    line-height: 56px;
+    font-size: 14px;
+    color: #282828;
+    padding: 0 25px;
+    margin-top: -23px;
+}
+.header .content{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+/*这是导航栏*/
+.header-middle a:hover{
+    background-color: #282828;
+    color: #ffe300;
+    text-decoration: none;
+}
+.header-middle a:focus{
+    font-weight: bold;
+    text-decoration: none;
+}
+.header-middle{
+    margin-left: 17%;
+    z-index: 2;
+    opacity: 1;
+}
+.header-middle i{
+    position: absolute;
+    top: 0;
+    right: 27.3%;
+    font-weight: bold;
+    font-size: 24px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+}
+
+.header i:hover{
+    background-color: #282828;
+    color: #ffe300;
+}
+.header .user-login i:hover{
+    background-color: #ffe300;
+    color: #282828;
+}
+
+/*这是用户登录*/
+.header-right{
+    display: flex;
+    flex-flow: nowrap row;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.header-right i{
+    font-size: 24px;
+    width: 60px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/*未登录点击上传弹出登录框（密码登录）*/
+.pawd-login{
+    /*display: none;*/
+}
+.pawd-login input:focus{
+    background: white;
+}
+.login-box{
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+    left: 38%;
+    width: 400px;
+    height: 500px;
+    display: none;
+    background-color: white;
+    border: 1px solid #F8F8FF;
+}
+.login-box input[type=button]{
+    background: #ffe300;
+    color: #282828;
+}
+.login-box input[type=button]:hover{
+    cursor: pointer;
+    color: #282828;
+    background-color: #ffD300;
+}
+
+.shut{
+    position: absolute;
+    left: 100.3%;
+    top: 0;
+    padding-left: 2px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background:rgba(0,0,0,0.6);
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+.shut p{
+    font-size: 20px;
+    padding-left: 2px;
+}
+
+.login-top{
+    display: flex;
+    flex-flow: row;
+    height: 71px;
+    margin: 0 5px;
+    border-bottom: 1px solid #ddd;
+    /*display: none;*/
+}
+.login-top a{
+    margin: 35px 20px;
+    padding-bottom: 35px;
+    color: #999999;
+    font-size: 17px;
+}
+.login-top a:hover{
+    text-decoration: none;
+    color: #282828;
+    border-bottom: 2px solid #282828;
+    font-weight: 500;
+}
+.login-top a:focus{
+    color: #282828;
+    border-bottom: 2px solid #282828;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.login-box .ewm{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.login-middle{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.login-middle input{
+    margin: 10px 20px;
+    height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #666666;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+    background: #f4f4f4;
+    outline: none;
+    text-shadow: none;
+    text-align: start;
+    border-radius: 5px;
+}
+.login-middle .login-btn{
+    height: 42px;
+    font-size: 16px;
+    color: #bbbbbb;
+    background: #eeeeee;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    text-align: center;
+    cursor: default;
+}
+/*复选框更换样式*/
+input[type="checkbox"] + label::before {
+    content: "\a0";  /*不换行空格*/
+    display: inline-block;
+    vertical-align: 0.3em;
+    width: 0.9em;
+    height: 0.9em;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: .2em;
+    background-color: white;
+    text-indent: .1em;
+    line-height: .9em;
+}
+input[type="checkbox"]:checked + label::before {
+    content: "\2713";
+    background-color: #ffe300;
+    color: white;
+    font-weight: bold;
+}
+.auto-login input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.auto-login{
+    display: flex;
+    flex-direction: row;
+}
+.auto-login p{
+    margin: -25px 0 0 40px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.auto-login a{
+    text-decoration: none;
+    color: #bbbbbb;
+    padding: 0 5px;
+}
+.auto-login span{
+    color: #dddddd;
+}
+.auto-login a:hover{
+    color: #282828;
+    text-decoration: none;
+}
+.auto-login .forgetpwd{
+    margin: 11px 0 0 130px;
+}
+
+/*第三方账号登录*/
+.third-party{
+    position: absolute;
+    left: 23%;
+    bottom: 20px;
+}
+.third-party{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.third-party p{
+    color: #999999;
+    text-align: center;
+}
+.third-party-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.count-login {
+    margin:   10px 15px 25px 15px;
+    width: 42px;
+    height: 42px;
+    line-height: 40px;
+    background-color: #dddddd;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+.third-party-img .wechat-login:hover{
+    background: #78D02E;
+}
+.third-party-img .wiebo-login:hover{
+    background: #e90e24;
+}
+.third-party-img .qq-login:hover{
+    background: #3caae3;
+}
+
+/*未登录点击上传弹出登录框（短信登录）*/
+.tel-login{
+    display: none;
+}
+.tel-login input:focus{
+    background: white;
+}
+.tel-login .verification{
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+.tel-login .verification input{
+    margin: 0 0 0 20px;
+    padding: 0 10px;
+}
+/*未登录点击上传弹出登录框（二维码登录）*/
+.ewm-login{
+    display: none;
+}
+.ewm-login .ewm-login-p{
+    height: 50px;
+    margin: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+.ewm-login .ewm-login-p p{
+    margin: 35px 0;
+    padding-bottom: 35px;
+    font-size: 16px;
+    color: #282828;
+    font-weight: 500;
+}
+.ewm-login .wechat-ewm{
+    text-align: center;
+    margin: 15px 0 15px 90px;
+
+}
+.ewm-login .text{
+    text-align: center;
+    color: #666666;
+    font-size: 12px;
+    font-weight: 500;
+}
+.ewm-login .ewm-forget{
+    margin: 25px 0 0 120px;
+}
+
+
+
+
+
+
+.user-login{
+    margin-left: 18px;
+}
+.user-login a{
+    display: inline-block;
+    margin:0 -20px;
+}
+.user-login a:hover{
+    color: #282828;
+    text-decoration: none;
+}
+.user-login i{
+    font-size: 15px;
+    color: #282828;
+}
+
+/*这是搜索框*/
+.header input{
+    height: 53px;
+    width: 520px;
+    line-height: 45px;
+    padding-left: 20px;
+    font-size: 15px;
+    background: #ffe300;
+    outline: none;
+    border: none;
+}
+.header .search{
+    display: flex;
+    flex-flow: nowrap row;
+    width: 520px;
+    height: 53px;
+    margin-left: 32%;
+    position: absolute;
+    opacity:0;
+}
+.header .search i{
+    font-size: 23px;
+    line-height: 55px;
+}
+.header .search i:hover{
+    background-color: #ffe300;
+    color: #282828;
+}
+.header .icon-Search{
+    opacity: 1;
+    cursor:pointer;
+}
+.header .icon-guanbi{
+    cursor:pointer;
+}
+
+/*这是搜索框热榜*/
+.header .hot-search{
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 56px;
+    background-color: white;
+    width: 520px;
+}
+.header .search-1{
+    height: 45px;
+    line-height: 45px;
+}
+.header .search-1:hover{
+    background-color: #F0F0F0;
+    text-decoration: none;
+}
+.header .hot-search p{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 12px;
+    color: #bbb;
+}
+.header .hot-search a{
+    padding: 0 20px;
+    cursor: pointer;
+    color: #444444;
+    text-decoration: none;
+}
+
+
+/*这是头部隐藏div*/
+.header .list1{
+    position: absolute;
+    top: 56px;
+    left: 423px;
+    display: none;
+    box-shadow: 0px 3px  10px #999999;
+    border-radius: 5px;
+    background-color: white;
+}
+.header .list1 a{
+    height: 25px;
+    line-height: 25px;
+    margin: 10px 5px ;
+    border-radius: 8px;
+}
+.header .ui{
+    padding: 0 32px;
+}
+.header .list1-top a:hover{
+    background-color: #ffe300;
+    color: #444444;
+}
+.header .list1-top span{
+    font-size: 10px;
+    color: #bbbbbb;
+}
+.header .list1-top{
+    border-bottom: 1px solid #ddd;
+}
+.header .list1-bottom a:hover{
+    color: #d36f16;
+    background-color: white;
+}
+.header .find:hover .list1{
+    display: block;
+}
+
+.header .list a{
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    margin: 5px 0;
+}
+.header .list a:hover{
+    background-color: #ffe300;
+    color: #444444;
+}
+
+.header .list2{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 56px;
+    left: 500px;
+    display: none;
+    box-shadow: 0px 3px  10px #999999;
+    border-radius: 5px;
+    width: 150px;
+    background-color: white;
+}
+.header .job:hover .list2{
+    display: block;
+}
+
+.header .list3{
+    position: absolute;
+    top: 56px;
+    left: 578px;
+    display: flex;
+    flex-flow: column;
+    display: none;
+    box-shadow: 0px 3px  10px #999999;
+    border-radius: 5px;
+    width: 150px;
+    background-color: white;
+}
+.header .active:hover .list3{
+    display: block;
+}
+
+
+.header .list4{
+    position: absolute;
+    top: 56px;
+    left: 654px;
+    display: flex;
+    flex-flow: column;
+    display: none;
+    box-shadow: 0px 3px  10px #999999;
+    border-radius: 5px;
+    width: 150px;
+    background-color: white;
+}
+.header .material:hover .list4{
+    display: block;
+}
+
+.header .list5{
+    position: absolute;
+    top: 56px;
+    left: 759px;
+    display: flex;
+    flex-flow: column;
+    display: none;
+    box-shadow: 0px 3px  10px #999999;
+    border-radius: 5px;
+    width: 150px;
+    background-color: white;
+}
+.header .lesson:hover .list5{
+    display: block;
+}
+
+.header .list6{
+    position: absolute;
+    top: 56px;
+    left: 835px;
+    display: flex;
+    flex-flow: column;
+    display: none;
+    box-shadow: 0px 3px  10px #999999;
+    border-radius: 5px;
+    width: 150px;
+    background-color: white;
+}
+.header .copyright:hover .list6{
+    display: block;
+}
+
+.header .list7{
+    position: absolute;
+    top: 56px;
+    left: 938px;
+    display: flex;
+    flex-flow: column;
+    display: none;
+    box-shadow: 0px 3px  10px #999999;
+    border-radius: 5px;
+    width: 150px;
+    background-color: white;
+}
+.header .more:hover .list7{
+    display: block;
+}
